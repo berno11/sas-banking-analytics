@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernice Kidiiga — Senior Data Analyst</title>
+<meta name="description" content="Bernice Kidiiga | Senior Data Analyst | 12+ years in banking analytics, regulatory reporting, SAS, SQL, Tableau. Charlotte, NC.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --ink: #0d1117;
+  --ink-soft: #1e2a3a;
+  --gold: #b8922a;
+  --gold-light: #d4aa4a;
+  --gold-pale: #f5edda;
+  --cream: #faf8f4;
+  --white: #ffffff;
+  --border: #e4ddd0;
+  --muted: #6b7a8d;
+  --accent: #1a4f7a;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 48px;
+}
+
+/* geometric background lines */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(184,146,42,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,146,42,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--gold);
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: white;
+  margin-bottom: 6px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.hero-bio {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  max-width: 580px;
+  margin-bottom: 52px;
+}
+.hero-bio strong { color: white; font-weight: 500; }
+
+/* CTA BUTTONS */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 16px 32px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(184,146,42,0.4); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  padding: 15px 28px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all 0.25s;
+}
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+.btn-icon { font-size: 16px; }
+
+/* scroll cue */
+.scroll-cue {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.3);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+.scroll-cue::after {
+  content: '↓';
+  font-size: 18px;
+}
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--gold);
+  padding: 24px 48px;
+}
+.stats-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat {
+  text-align: center;
+  padding: 0 20px;
+  border-right: 1px solid rgba(0,0,0,0.12);
+}
+.stat:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(13,17,23,0.65);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  display: block;
+}
+@media(max-width:600px){
+  .stats-inner { grid-template-columns: repeat(2,1fr); gap: 16px; }
+  .stat { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; }
+  .stat:nth-child(3), .stat:last-child { border-bottom: none; }
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: 80px 48px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 48px;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+h2 em { font-style: italic; color: var(--gold); }
+
+/* ── EXPERTISE GRID ── */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.expertise-card {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 28px;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 0;
+  background: var(--gold);
+  transition: height 0.3s;
+}
+.expertise-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+.expertise-card:hover::before { height: 100%; }
+.exp-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+.exp-title { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+.exp-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ── TOOLS ── */
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+.tool-pill {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-soft);
+  transition: all 0.2s;
+}
+.tool-pill:hover { background: var(--gold-pale); border-color: var(--gold); color: var(--gold); }
+.tool-pill.highlight { background: var(--ink); color: var(--gold); border-color: var(--ink); }
+
+/* ── PORTFOLIO HIGHLIGHT ── */
+.portfolio-box {
+  background: var(--ink);
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.portfolio-box::after {
+  content: '</>';
+  position: absolute;
+  right: 40px; bottom: 20px;
+  font-family: 'DM Mono', monospace;
+  font-size: 80px;
+  color: rgba(184,146,42,0.08);
+  font-weight: 500;
+}
+.portfolio-box h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 12px;
+}
+.portfolio-box p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.8; margin-bottom: 28px; }
+.ex-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.ex-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  border: 1px solid rgba(184,146,42,0.3);
+  padding: 4px 10px;
+}
+
+/* ── CONTACT ── */
+.contact-section {
+  background: var(--ink-soft);
+  padding: 72px 48px;
+  text-align: center;
+}
+.contact-section h2 { color: white; margin-bottom: 12px; }
+.contact-section p { color: rgba(255,255,255,0.55); max-width: 500px; margin: 0 auto 36px; font-size: 15px; }
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+.contact-item span { font-size: 18px; }
+.contact-item a { color: var(--gold-light); text-decoration: none; }
+.contact-item a:hover { text-decoration: underline; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  padding: 24px 48px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+  font-family: 'DM Mono', monospace;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow { animation: fadeUp 0.6s ease both; }
+.hero h1 { animation: fadeUp 0.6s 0.15s ease both; }
+.hero-title { animation: fadeUp 0.6s 0.25s ease both; }
+.hero-bio { animation: fadeUp 0.6s 0.35s ease both; }
+.cta-row { animation: fadeUp 0.6s 0.45s ease both; }
+
+@media(max-width:700px){
+  .hero, .section, .contact-section { padding-left: 24px; padding-right: 24px; }
+  .stats-bar { padding: 24px; }
+  .section-divider { margin: 0 24px; }
+  .portfolio-box { padding: 28px; }
+  .portfolio-box::after { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Senior Data Analyst · Charlotte, NC</div>
+    <h1>Bernice<br><em>Kidiiga</em></h1>
+    <div class="hero-title">Banking Analytics &nbsp;·&nbsp; Regulatory Reporting &nbsp;·&nbsp; Data Governance</div>
+    <p class="hero-bio">
+      12+ years delivering <strong>enterprise data analytics</strong> across financial services and healthcare.
+      Expert in <strong>SAS PROC SQL</strong>, regulatory compliance reporting, audit-defensible
+      reconciliation, and building repeatable data quality frameworks at scale —
+      across portfolios exceeding <strong>$350 billion</strong> in commitments.
+    </p>
+    <div class="cta-row">
+      <a href="https://github.com/YOUR_USERNAME/sas-banking-analytics" target="_blank" class="btn-primary">
+        <span class="btn-icon">⚡</span> View GitHub Portfolio
+      </a>
+      <a href="mailto:berno77@gmail.com" class="btn-secondary">
+        <span class="btn-icon">✉</span> berno77@gmail.com
+      </a>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</section>
+
+<!-- ══ STATS ══════════════════════════════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Years Experience</span></div>
+    <div class="stat"><span class="stat-num">25</span><span class="stat-label">SAS Exercises</span></div>
+    <div class="stat"><span class="stat-num">$350B</span><span class="stat-label">Portfolio Scale</span></div>
+    <div class="stat"><span class="stat-num">5</span><span class="stat-label">Banking Datasets</span></div>
+  </div>
+</div>
+
+<!-- ══ EXPERTISE ══════════════════════════════════════════════════════════ -->
+<div class="section-divider"></div>
+<div class="section">
+  <div class="section-label">What I Do</div>
+  <h2>Areas of <em>Expertise</em></h2>
+  <div class="expertise-grid">
+    <div class="expertise-card">
+      <span class="exp-icon">🏦</span>
+      <div class="exp-title">Regulatory Reporting</div>
+      <div class="exp-desc">CTR filing, loan delinquency reporting, CECL data validation, and audit-defensible reconciliation across enterprise data warehouses.</div>
+    </div>
+    <div class="expertise-card">
+      <span class="exp-icon">🔍</span>
+      <div class="exp-title">Data Quality & Governance</div>
+      <div class="exp-desc">Source-to-target mapping, data lineage documentation, exception tracking, and repeatable validation frameworks aligned with SOX and internal audit standards.</div>
+    </div>
+    <div class="expertise-card">
+      <span class="exp-icon">⚙️</span>
+      <div class="exp-title">SAS & SQL Analytics</div>
+      <div class="exp-desc">PROC SQL development including CTEs, correlated subqueries, macro automation, and multi-table joins across Teradata, Oracle, and SQL Server environments.</div>
+    </div>
+    <div class="expertise-card">
+      <span class="exp-icon">📊</span>
+      <div class="exp-title">Data Visualization</div>
+      <div class="exp-desc">Tableau dashboards for compliance KPIs, portfolio monitoring, audit exception tracking, and executive-level operational reporting.</div>
+    </div>
+    <div class="expertise-card">
+      <span class="exp-icon">🛡️</span>
+      <div class="exp-title">AML / KYC Compliance</div>
+      <div class="exp-desc">Risk rating validation, AML flag analysis, false positive reduction, and transaction monitoring data quality — 80% false positive reduction at Wells Fargo.</div>
+    </div>
+    <div class="expertise-card">
+      <span class="exp-icon">🔄</span>
+      <div class="exp-title">ETL & Automation</div>
+      <div class="exp-desc">Alteryx workflow development, automated SQL pipelines, and repeatable data prep frameworks — reducing manual processing time by up to 80%.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TOOLS ═══════════════════════════════════════════════════════════════ -->
+<div class="section-divider"></div>
+<div class="section">
+  <div class="section-label">Tech Stack</div>
+  <h2>Tools &amp; <em>Technologies</em></h2>
+  <div class="tools-grid">
+    <span class="tool-pill highlight">SAS PROC SQL</span>
+    <span class="tool-pill highlight">SQL</span>
+    <span class="tool-pill highlight">Tableau</span>
+    <span class="tool-pill">Python</span>
+    <span class="tool-pill">Alteryx</span>
+    <span class="tool-pill">Oracle</span>
+    <span class="tool-pill">Teradata</span>
+    <span class="tool-pill">SQL Server</span>
+    <span class="tool-pill">BigQuery</span>
+    <span class="tool-pill">SAS OnDemand</span>
+    <span class="tool-pill">Excel / VBA</span>
+    <span class="tool-pill">Jira</span>
+    <span class="tool-pill">Confluence</span>
+    <span class="tool-pill">GitHub</span>
+    <span class="tool-pill">EDW / Data Warehouse</span>
+    <span class="tool-pill">ETL Pipelines</span>
+  </div>
+
+  <!-- PORTFOLIO FEATURE BOX -->
+  <div class="portfolio-box">
+    <div class="section-label" style="color:var(--gold);">Featured Project</div>
+    <h3>SAS PROC SQL — Banking Analytics Portfolio</h3>
+    <p>
+      25 runnable SAS PROC SQL exercises built on 5 mock banking datasets —
+      covering AML filtering, loan risk classification, CTR regulatory reporting,
+      audit exception tracking, and a capstone end-to-end regulatory dashboard
+      joining all five tables in a single query.
+    </p>
+    <div class="ex-tags">
+      <span class="ex-tag">CTEs vs Subqueries</span>
+      <span class="ex-tag">Correlated Subqueries</span>
+      <span class="ex-tag">Macro Variables</span>
+      <span class="ex-tag">Regulatory Reporting</span>
+      <span class="ex-tag">Audit Aging</span>
+      <span class="ex-tag">Data Reconciliation</span>
+      <span class="ex-tag">Loan Risk Tiers</span>
+      <span class="ex-tag">CTR Filing</span>
+      <span class="ex-tag">Multi-table JOINs</span>
+    </div>
+    <a href="https://github.com/YOUR_USERNAME/sas-banking-analytics" target="_blank" class="btn-primary">
+      <span class="btn-icon">⚡</span> View Full Portfolio on GitHub
+    </a>
+  </div>
+</div>
+
+<!-- ══ CONTACT ════════════════════════════════════════════════════════════ -->
+<div class="contact-section">
+  <div class="section-label" style="color:var(--gold-light);">Get In Touch</div>
+  <h2>Open to <em>Opportunities</em></h2>
+  <p>Available for Senior Data Analyst, Data Governance, and Regulatory Reporting roles in banking and financial services.</p>
+  <div class="contact-info">
+    <div class="contact-item"><span>📍</span> Charlotte, North Carolina</div>
+    <div class="contact-item"><span>✉️</span> <a href="mailto:berno77@gmail.com">berno77@gmail.com</a></div>
+    <div class="contact-item"><span>⚡</span> <a href="https://github.com/YOUR_USERNAME/sas-banking-analytics" target="_blank">GitHub Portfolio</a></div>
+  </div>
+  <a href="mailto:berno77@gmail.com" class="btn-primary">Request Dataset Access &rarr;</a>
+</div>
+
+<footer>
+  © 2024 Bernice Kidiiga &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; CC BY-NC 4.0
+</footer>
+
+</body>
+</html>
