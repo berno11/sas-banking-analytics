@@ -17,7 +17,7 @@
 
 ## About
 
-This repository demonstrates applied **SAS PROC SQL** skills using a realistic mock banking dataset modeled after enterprise financial services environments — the same analytical patterns used in regulatory reporting, loan portfolio analysis, AML/KYC compliance, audit exception tracking, and data reconciliation at institutions like **Wells Fargo** and **Bank of America**.
+This repository demonstrates applied **SAS PROC SQL** skills using a realistic mock banking dataset modeled after enterprise financial services environments — the same analytical patterns used in regulatory reporting, loan portfolio analysis, AML/KYC compliance, audit exception tracking, and data reconciliation at institutions like **BBK** and **CC**.
 
 > 🔒 **Dataset files are not included in this public repository.**
 > Column definitions and data structure are documented in [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md).
