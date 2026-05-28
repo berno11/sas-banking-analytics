@@ -9,7 +9,7 @@
 ![Domain](https://img.shields.io/badge/Domain-Banking%20%26%20Financial%20Services-darkgreen)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-📧 berno77@gmail.com &nbsp;|&nbsp; 📍 Charlotte, NC &nbsp;|&nbsp; 💼 [View Full Portfolio](https://github.com/YOUR_USERNAME/sas-banking-analytics)
+📧 berno77@gmail.com &nbsp;|&nbsp; 📍 Charlotte, NC &nbsp;|&nbsp; 💼 [View Full Portfolio](https://github.com/berno11/sas-banking-analytics)
 
 </div>
 
